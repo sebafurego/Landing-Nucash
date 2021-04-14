@@ -10,6 +10,9 @@
     <link rel="stylesheet/less" type="text/css" href="./styles.less" />
     <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script>
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <title>NuCash</title>
   </head>
   <body>
@@ -126,15 +129,61 @@
             <p>Our team of experts is spread across the globe, but our roots are very much in India. With thorough knowledge of global markets and trends, NuCash strives to serve you with the best-in-class experience. By the students, for the students.</p>
         </div>
     </section>
-    <section class="testimonials">
-        <div class="mobilebar">
-            <ul>
-                <li><a href="#"><span>About us</span></a></li>
-                <li><a href="#"><span>Partners</span></a></li>
-                <li><a href="#"><span>Contact us</span></a></li>
+    
+    <section class="testytitle">
+        <h3>NuCash is a great friend.
+            So says the world.</h3>
+    </section>
+    <section class="testimonials swiper-container">
+        
+        <div class="swiper-container">
+            <div class="arrow-box">
+                <div class="cnt">
+                    <span class="arrow arrow-left">
+                        <img src="https://sebafurego.ru/test/images/left.svg" alt="">
+                    </span>
+                    <span class="arrow arrow-right">
+                        <img src="https://sebafurego.ru/test/images/right.svg" alt="">
+                    </span>
+                </div>
+            </div>
+            <ul class="testitems swiper-wrapper">
+                <li class="swiper-slide">
+                    <span class="box">
+                        <span class="test">“It sounds like a one stop shop to me. All my finance needs in one app. I am excited to get the experience of it.”</span>
+                    </span>
+                    <span class="names">Rupali Babbar, IMT Ghaziabad</span>
+                </li>
+                <li class="swiper-slide">
+                    <span class="box">
+                        <span class="test">“It sounds like a one stop shop to me. All my finance needs in one app. I am excited to get the experience of it.”</span>
+                    </span>
+                    <span class="names">Rupali Babbar, IMT Ghaziabad</span>
+                </li>
+                <li class="swiper-slide">
+                    <span class="box">
+                        <span class="test">“It sounds like a one stop shop to me. All my finance needs in one app. I am excited to get the experience of it.”</span>
+                    </span>
+                    <span class="names">Rupali Babbar, IMT Ghaziabad</span>
+                </li>
             </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="dotbox">
+            <div class="dotted"></div>
         </div>
     </section>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.arrow-right',
+                prevEl: '.arrow-left',
+            },
+            pagination: {
+                el: '.dotted',
+            },
+        });
+    </script>
     <section class="thankyou">
         <div class="cnt">
             <img src="./images/logoround.svg" alt="" class="logo">

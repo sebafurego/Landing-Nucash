@@ -73,7 +73,11 @@ This CSS resource incorporates links to font software which is the valuable copy
     font-style:oblique;
     src:url("https://cdn.nucash.net/Fonts/1475562/a2477e08-09d9-4d4b-97a9-23a1e22cb44c.woff2") format("woff2"),url("https://cdn.nucash.net/Fonts/1475562/19d12bba-92b1-43ad-9bab-cd36a4195c2a.woff") format("woff");
 }
-
+div, span, section {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
 body {
     background-color: #222 !important;
     color: #fff !important;
@@ -117,7 +121,9 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #222;
-    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -447,9 +453,125 @@ body {
         }
     }
 }
+.testytitle {
+    overflow: hidden;
+    padding: 120px 20px 50px;
+    h3 {
+        font-size: 48px;
+        text-align: center;
+        color: #fff;
+        margin: 0;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
 .testimonials {
     height: 709px;
     background-color: #222;
+    padding: 0px 0px 60px;
+    position: relative;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+    .arrow-box {
+        position: absolute;
+        top: 130px;
+        overflow: hidden;
+        width: 100%;
+        .cnt {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .arrow {
+                display: flex;
+                width: 48px;
+                overflow: hidden;
+                cursor: pointer;
+                z-index: 10;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    ul.testitems {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 350px;
+        li {
+            width: 100%;
+            color: #fff;
+            flex-shrink: 0;
+            list-style: none;
+            margin: 0;
+            padding: 0 60px;
+            .box {
+                max-width: 784px;
+                margin: 0 auto;
+                height: 280px;
+                background-color: #FFCF01;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 30px;
+                text-align: center;
+                position: relative;
+                background: linear-gradient(180deg, #FFCF01 0%, #FAA61A 100%);
+                &:before {
+                    content: ""; 
+                    border: solid transparent;
+                    position: absolute; 
+                    top: 100%;
+                    left: calc(50% - 12px);
+                    border-top-color: #FAA61A;
+                    border-width: 24px;
+                    margin-left: -1px;
+                }
+                span.test {
+                    font-size: 36px;
+                    color: #333;
+                }
+                
+            }
+            span.names {
+                font-size: 24px;
+                color: #fff;
+                margin-top: 40px;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    .dotbox {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 55px 0 0;
+        .swiper-pagination-bullet {
+            width: 16px;
+            height: 16px;
+            background-color: #FFCF01;
+            opacity: 0.7;
+            list-style: none;
+            border-radius: 50%;
+            &.swiper-pagination-bullet-active {
+                opacity: 1;
+                background-color: #FFCF01;
+            
+            }
+            &+.swiper-pagination-bullet {
+                margin-left: 24px;
+            }
+        }
+    }
 }
 .thankyou {
     height: 100vh;
@@ -837,6 +959,41 @@ body {
             }
         }
     }
+    .testimonials {
+        .arrow-box {
+            .cnt {
+                .arrow {
+                    img {
+                    }
+                }
+            }
+        }
+        ul.testitems {
+            li {
+                .box {
+                    padding: 20px 15px;
+                    &:before {
+                    }
+                    span.test {
+                        font-size: 24px;
+                    }
+                    
+                }
+                span.names {
+                }
+            }
+        }
+        .dotbox {
+            ul.dotted {
+                li {
+                    &.active {
+                    }
+                    &+li {
+                    }
+                }
+            }
+        }
+    }
     .getintouch {
         .cnt {
             h3 {
@@ -851,7 +1008,6 @@ body {
     .foot {
         flex-direction: column;
         img.logo {
-            display: none;
         }
         span.copy {
             display: none;
@@ -864,6 +1020,9 @@ body {
                     padding: 20px 0;
                     color: #fff !important;
                     text-decoration: none;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
                     &:hover {
                         opacity: 0.8;
                     }
@@ -983,3 +1142,10 @@ body {
         }
     }
 } 
+
+
+.swiper-container {
+  }
+
+  .swiper-slide {
+  }
